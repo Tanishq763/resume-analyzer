@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Resume Analyzer</h1>
+        <div class="input-group">
+            <label>Upload Resume (PDF)</label>
+            <input type="file" id="resume" accept=".pdf">
+        </div>
+        <div class="input-group">
+            <label>Job Description</label>
+            <textarea id="job" placeholder="Paste the job description here..."></textarea>
+        </div>
+        <button onclick="analyze()">Analyze Resume</button>
+        <div id="result-container">
+            <h3>Analysis Result:</h3>
+            <pre id="result">Results will appear here...</pre>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
