@@ -14,8 +14,12 @@ async function analyze() {
 
     resultBox.innerText = "Processing... Please wait.";
 
+    // PASTE YOUR RAILWAY URL HERE
+    const BACKEND_URL = "https://resume-analyzer-production-64c0.up.railway.app"; 
+
     try {
-        const response = await fetch("/analyze", {
+        // Make sure to add /analyze to the end of the URL!
+        const response = await fetch(`${BACKEND_URL}/analyze`, {
             method: "POST",
             body: formData
         });
@@ -29,5 +33,6 @@ async function analyze() {
         }
     } catch (error) {
         resultBox.innerText = "Connection Error: Ensure the server is running.";
+        console.error(error);
     }
 }
